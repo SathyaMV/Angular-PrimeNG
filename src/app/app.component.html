@@ -1,0 +1,88 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h5>Text</h5>
+  <span class="p-float-label">
+    <input id="float-input" type="text" pInputText formControlName="text" />
+    <label for="float-input">Username</label>
+  </span>
+  <div class="field col-12">
+    <h5>TextArea</h5>
+    <textarea
+      rows="5"
+      cols="30"
+      pInputTextarea
+      formControlName="textarea"
+    ></textarea>
+  </div>
+  <div class="field col-12">
+    <h5>Integer</h5>
+    <p-inputNumber
+      mode="decimal"
+      [min]="-999999999999999"
+      [max]="9999999999999999"
+      [showButtons]="true"
+      [maxlength]="16"
+      formControlName="integer"
+    ></p-inputNumber>
+  </div>
+  <div class="field col-12">
+    <h5>Decimal</h5>
+    <p-inputNumber
+      mode="decimal"
+      [min]="-999999999.99"
+      [max]="9999999999.99"
+      [showButtons]="true"
+      [step]="0.05"
+      [maxlength]="16"
+      [minFractionDigits]="2"
+      [maxFractionDigits]="2"
+      formControlName="decimal"
+    ></p-inputNumber>
+  </div>
+  <div class="field col-12">
+    <h5>Date</h5>
+    <p-calendar
+      inputId="basic"
+      [(ngModel)]="date"
+      [showIcon]="true"
+      dateFormat="dd.mm.yy"
+      formControlName="date"
+    ></p-calendar>
+  </div>
+  <div class="p-field p-col-12 p-md-4">
+    <h5>Time Only</h5>
+    <p-calendar
+      [timeOnly]="true"
+      inputId="timeonly"
+      hourFormat="12"
+      formControlName="time"
+    ></p-calendar>
+  </div>
+  <div class="field col-12">
+    <h5>Dropdown</h5>
+    <p-dropdown
+      placeholder="Choose an option"
+      [options]="listOptions"
+      [showClear]="true"
+      formControlName="dropdown"
+    ></p-dropdown>
+  </div>
+  <div class="field col-12">
+    <h5>On/Off</h5>
+    <div>
+      <p-inputSwitch></p-inputSwitch>
+    </div>
+  </div>
+  <p-button
+    type="submit"
+    label="Confrim"
+    styleClass="p-button-success"
+  ></p-button>
+  <p-button
+    type="button"
+    label="Clear"
+    styleClass="p-button-danger ml-1"
+    (click)="clearForm()"
+  ></p-button>
+</form>
+<h1>Values:</h1>
+<pre>{{ log | json }}</pre>

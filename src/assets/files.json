@@ -1,0 +1,26 @@
+{
+    "data": 
+    [
+        {
+            "label": "FrontEnd",
+            "data": "FrontEnd Folder",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [
+                {"label": "HTML", "data": "HTML"}, 
+                {"label": "CSS", "data": "CSS"},
+                {"label": "JavaScript", "data": "JavaScript"}
+            ]
+        },
+        {
+            "label": "Framework",
+            "data": "Framework Folder",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [
+                {"label": "React", "data": "React"},
+                {"label": "Angular",  "data": "Angular"},
+                {"label": "Bootstrap", "data": "Bootstrap"}]
+        }
+    ]
+}
